@@ -13,7 +13,6 @@ npm install vue-number-animation
 
 Register Animate Number in your app:
 ```js
-In main.js
 import Vue from 'vue'
 import VueNumber from 'vue-number-animation'
 
@@ -90,5 +89,13 @@ Events
 | Event | Description |
 |:--|:--|
 | @start | Called when the animation has started |
-| @completed | Called when the animation has completed |
+| @complete | Called when the animation has completed |
 | @update | Called every time the animation updates (on every frame while the animation is active) |
+
+Methods
+
+| Method | Description |
+|:--|:--|
+| play | Starts the animation |
+| pause | Pauses the animation |
+| resume | Resume the animation after pause |
