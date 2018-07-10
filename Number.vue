@@ -1,5 +1,5 @@
 <template>
-    <span>{{ tweenedNumber }}</span>
+    <span v-on="$listeners" v-bind="$attrs">{{ tweenedNumber }}</span>
 </template>
 
 <script>
@@ -9,12 +9,13 @@ export default {
   name: 'number',
   props: {
     from: {
-      type: Number,
+      type: [Number, String],
       default: 0
     },
     to: {
-      type: Number,
-      required: true
+      type: [Number, String],
+      required: true,
+      default: 0
     },
     format: {
       type: Function,

@@ -40,7 +40,7 @@ In your Vue file you can call it like this:
 	:duration="5"
     easing="Back.easeIn"
     @complete="completed"
-    @click="playAnimation"/>
+    @click.native="playAnimation"/>
 
 <script>
 export default {
