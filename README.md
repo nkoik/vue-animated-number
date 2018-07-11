@@ -1,6 +1,12 @@
-# Animate Number  [![NPM version](https://img.shields.io/npm/v/vue-form-generator.svg)](https://www.npmjs.com/package/vue-form-generator) ![VueJS v2.x compatible](https://img.shields.io/badge/vue%202.x-compatible-green.svg)
+# Animated Counter - Number  ![VueJS v2.x compatible](https://img.shields.io/badge/vue%202.x-compatible-green.svg)
 
 This is a Vue number plugin. It animates the number that you pass in prop.
+
+[![GitHub license](https://img.shields.io/github/license/nkoik/animatednumber.svg)](https://github.com/nkoik/animatednumber/blob/master/LICENSE) [![npm](https://img.shields.io/npm/v/vue-number-animation.svg)](https://www.npmjs.com/package/vue-number-animation) ![icon](https://www.programwitherik.com/content/images/2017/01/87ow-1.png)
+
+## ✔ Demo
+
+https://codesandbox.io/s/8256nwlq78
 
 ## ✔ Installation
 
@@ -39,7 +45,7 @@ In your Vue file you can call it like this:
 	:duration="5"
     easing="Back.easeIn"
     @complete="completed"
-    @click.native="playAnimation"/>
+    @click="playAnimation"/>
 
 <script>
 export default {
@@ -96,6 +102,6 @@ Methods
 
 | Method | Description |
 |:--|:--|
-| play | Starts the animation |
-| pause | Pauses the animation |
-| resume | Resume the animation after pause |
+| play() | Starts the animation |
+| pause() | Pauses the animation |
+| resume() | Resume the animation after pause |
