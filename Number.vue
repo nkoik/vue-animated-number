@@ -4,6 +4,8 @@
 
 <script>
 import {TweenLite} from 'gsap'
+// Returns the number of full stop in given string.
+const countFullstops = (str) => str.replace(/[^.]/g, '').length
 
 export default {
   name: 'number',
@@ -66,12 +68,12 @@ export default {
     pause () {
       this.tween.tLite.pause()
     },
-    resume () {
-      this.tween.tLite.resume()
+    restart () {
+      this.tween.tLite.restart()
     },
     easeCheck () {
       const vm = this
-      if (vm.easing.replace(/[^.]/g, '').length !== 1) {
+      if (countFullstops(vm.easing) !== 1) {
         throw new Error('Invalid ease type. (eg. easing="Power1.easeOut")')
       }
       return vm.easing

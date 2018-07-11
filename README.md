@@ -104,4 +104,4 @@ Methods
 |:--|:--|
 | play() | Starts the animation |
 | pause() | Pauses the animation |
-| resume() | Resume the animation after pause |
+| restart() | Restarts and begins playing forward from the beginning |
