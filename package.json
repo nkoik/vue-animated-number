@@ -1,6 +1,6 @@
 {
   "name": "vue-number-animation",
-  "version": "1.0.2",
+  "version": "1.0.5",
   "description": "This is a Vue number plugin. It animates the number that you pass in prop.",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nkoik/animatednumber.git"
+    "url": "git+https://github.com/nkoik/vue-animated-number.git"
   },
   "keywords": [
     "vue",
@@ -28,9 +28,9 @@
   "author": "Nikos Koikas",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/nkoik/animatednumber/issues"
+    "url": "https://github.com/nkoik/vue-animated-number/issues"
   },
-  "homepage": "https://github.com/nkoik/animatednumber",
+  "homepage": "https://github.com/nkoik/vue-animated-number",
   "dependencies": {
     "gsap": "^2.0.1"
   }
