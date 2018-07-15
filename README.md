@@ -2,7 +2,7 @@
 
 This is a Vue number plugin. It animates the number that you pass in prop.
 
-[![GitHub license](https://img.shields.io/github/license/nkoik/animatednumber.svg)](https://github.com/nkoik/animatednumber/blob/master/LICENSE) [![npm](https://img.shields.io/npm/v/vue-number-animation.svg)](https://www.npmjs.com/package/vue-number-animation) ![icon](https://www.programwitherik.com/content/images/2017/01/87ow-1.png)
+[![GitHub license](https://img.shields.io/github/license/nkoik/vue-animated-number.svg)](https://github.com/nkoik/vue-animated-number/blob/master/LICENSE) [![npm](https://img.shields.io/npm/v/vue-number-animation.svg)](https://www.npmjs.com/package/vue-number-animation) ![icon](https://www.programwitherik.com/content/images/2017/01/87ow-1.png)
 
 ## ✔ Demo
 
@@ -105,3 +105,7 @@ Methods
 | play() | Starts the animation |
 | pause() | Pauses the animation |
 | restart() | Restarts and begins playing forward from the beginning |
+
+## ✔ License
+
+MIT
