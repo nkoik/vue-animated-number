@@ -32,6 +32,6 @@
   },
   "homepage": "https://github.com/nkoik/vue-animated-number",
   "dependencies": {
-    "gsap": "^2.0.1"
+    "gsap": "^3.6.0"
   }
 }
