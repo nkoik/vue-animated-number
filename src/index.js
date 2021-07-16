@@ -1,7 +1,7 @@
 import Number from './Number.vue'
 
 const VueNumber = {
-  install: function (Vue, options) {
+  install: function (Vue) {
     Vue.component('number', Number)
   }
 }

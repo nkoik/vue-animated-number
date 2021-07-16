@@ -1,15 +1,25 @@
 {
   "name": "vue-number-animation",
-  "version": "1.0.5",
+  "author": "Nikos Koikas",
+  "license": "MIT",
+  "version": "1.1.0",
   "description": "This is a Vue number plugin. It animates the number that you pass in prop.",
-  "main": "index.js",
+  "main" : ".dist/vue-number-animation.common.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name vue-number-animation ./src/index.js",
+    "lint": "vue-cli-service lint"
   },
+  "files": ["dist"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nkoik/vue-animated-number.git"
   },
+  "bugs": {
+    "url": "https://github.com/nkoik/vue-animated-number/issues"
+  },
+  "homepage": "https://github.com/nkoik/vue-animated-number",
   "keywords": [
     "vue",
     "vuejs",
@@ -25,13 +35,36 @@
     "counter reverse",
     "vue animated counter"
   ],
-  "author": "Nikos Koikas",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/nkoik/vue-animated-number/issues"
-  },
-  "homepage": "https://github.com/nkoik/vue-animated-number",
+  "private": false,
   "dependencies": {
     "gsap": "^3.6.0"
-  }
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.2.2",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
 }
