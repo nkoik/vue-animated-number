@@ -5,9 +5,6 @@
   "version": "1.1.1",
   "description": "This is a Vue number plugin. It animates the number that you pass in prop.",
   "main": "index.js",
-  "scripts": {
-    "dev": "vue serve Number.vue"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/nkoik/vue-animated-number.git"
