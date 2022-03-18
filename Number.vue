@@ -1,5 +1,5 @@
 <template>
-  <component :is="is">
+  <component :is="tag">
     {{ tweenedNumber }}
   </component>
 </template>
@@ -37,7 +37,7 @@ export default {
       type: Number,
       default: 0 // Delay the animation in seconds
     },
-    is: {
+    tag: {
       type: String,
       default: 'span'
     },
