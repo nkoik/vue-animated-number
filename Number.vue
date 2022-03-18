@@ -1,5 +1,7 @@
 <template>
-    <span>{{ tweenedNumber }}</span>
+  <component :is="is">
+    {{ tweenedNumber }}
+  </component>
 </template>
 
 <script>
@@ -35,10 +37,14 @@ export default {
       type: Number,
       default: 0 // Delay the animation in seconds
     },
+    is: {
+      type: String,
+      default: 'span'
+    },
     animationPaused: Boolean // Stops animation before start
   },
   data() {
-    return { 
+    return {
       fromProp: this.from
     }
   },
