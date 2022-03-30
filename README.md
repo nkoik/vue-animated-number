@@ -39,6 +39,7 @@ In your Vue file you can call it like this:
     easing="Power1.easeOut"/>
 
 <number
+    tag="div"
     animationPaused
     ref="number2"
 	:to="10000"
@@ -76,6 +77,7 @@ Optional Props
 
 | Property | Description | Type | Default |
 |:--|:--|:--|:--|
+| tag | Element wrapper | <i>String</i> | 'span' |
 | from | Animation start point | <i>Number</i> | 0 |
 | duration | Duration of the animation (seconds) | <i>Number</i> | 1 |
 | delay | Amount of delay (seconds) before the animation starts | <i>Number</i> | 0 |
