@@ -2,7 +2,7 @@
   "name": "vue-number-animation",
   "author": "Nikos Koikas",
   "license": "MIT",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "This is a Vue number plugin. It animates the number that you pass in prop.",
   "main": "index.js",
   "repository": {
