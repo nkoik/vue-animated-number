@@ -63,7 +63,7 @@ export default {
           ease: vm.easeCheck(),
           onStart: () => vm.$emit('start'),
           onComplete: () => vm.$emit('complete'),
-          onUpdate: () => vm.$emit('update'),
+          onUpdate: () => vm.$emit('update', vm.tweenedNumber),
           delay: vm.delay // In seconds
         })
       vm.tween.tLite = tLite
