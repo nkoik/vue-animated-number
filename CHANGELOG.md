@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [2.0.2](https://github.com/nkoik/vue-animated-number/compare/v2.0.0...v2.0.2) (2023-12-04)
+
+
+### Bug Fixes
+
+* Remove code & update readme ([#22](https://github.com/nkoik/vue-animated-number/issues/22)) ([a9febad](https://github.com/nkoik/vue-animated-number/commit/a9febad1bf076e40903c3f3f448b47bf91f9d1c5))
+
 ## [2.0.0](https://github.com/nkoik/vue-animated-number/compare/v1.0.6...v2.0.0) (2023-12-03)
 
 
