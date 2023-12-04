@@ -5,11 +5,9 @@ import {
   h,
   reactive,
   watch,
-  toRef,
   toRefs,
 } from "vue-demi";
 import { animate } from "../utils/animate";
-import anime from "animejs/lib/anime.es.js";
 
 export default defineComponent({
   props: {
