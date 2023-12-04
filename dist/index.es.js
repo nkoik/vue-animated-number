@@ -1,4 +1,5 @@
 import { defineComponent, reactive, watch, toRefs, h } from "vue-demi";
+const countFullstops = (str) => str.replace(/[^.]/g, "").length;
 var defaultInstanceSettings = {
   update: null,
   begin: null,
@@ -1397,11 +1398,18 @@ anime.penner = penner;
 anime.random = function(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 };
+function easeCheck(easing) {
+  if (countFullstops(easing) > 0) {
+    console.error("Invalid ease type. Please use anime.js ease types.");
+    return "linear";
+  }
+  return easing;
+}
 function animate(obj, options, key = "tweenedNumber") {
   return anime({
     targets: obj,
     [key]: options[key],
-    easing: options.easing,
+    easing: easeCheck(options.easing),
     update: options.onUpdate,
     complete: options.onComplete,
     begin: options.onStart,

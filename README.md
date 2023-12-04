@@ -1,45 +1,49 @@
-# Animated Number Vue 2 & 3
+# Animated Number Vue 3 & 2
+![npm](https://img.shields.io/npm/dt/vue-number-animation) ![icon](https://img.shields.io/badge/Vue_3-black?logo=vue.js) ![icon](https://img.shields.io/badge/_-typescript-black?logo=typescript)
 
-`Simple, lightweight animated number plugin for Vue.js 2.x & 3.0`
-[![GitHub license](https://img.shields.io/github/license/nkoik/vue-animated-number.svg)](https://github.com/nkoik/vue-animated-number/blob/master/LICENSE) [![npm](https://img.shields.io/npm/v/vue-number-animation.svg)](https://www.npmjs.com/package/vue-number-animation) ![icon](https://www.programwitherik.com/content/images/2017/01/87ow-1.png)
+Simple & lightweight animated number plugin designed for Vue.js 3.0 & 2.x. This plugin provides animated transitions for numeric values, enhancing the visual appeal of numerical data in Vue.js applications.
 
-##### Vue 2 (with gsap) -> vue-number-animation@ 1.x.x
+![icon](https://i.ibb.co/Px607v8/image-1-1.png)
 
-#### Vue 2 & 3 (with animejs) -> vue-number-animation@ 2.x.x
+## Key Features:
 
-## ✔ Demo @1.x.x
+>-  Vue 3 & 2 (with animejs) is supported in version 2.x.x. ![icon](https://img.shields.io/badge/Vue_3-black?logo=vue.js) ![icon](https://img.shields.io/badge/Vue_2-black?logo=vue.js) [![npm](https://img.shields.io/npm/v/vue-number-animation.svg)](https://www.npmjs.com/package/vue-number-animation)
+>- Vue 2 (with gsap) is supported in version 1.x.x. ![icon](https://img.shields.io/badge/Vue_2-black?logo=vue.js) ![Static Badge](https://img.shields.io/badge/npm-1.1.2-blue)
 
-https://codesandbox.io/s/8256nwlq78
+## Demo:
 
-## ✔ Installation
+Explore the demo for version 1.x.x [here](https://codesandbox.io/s/8256nwlq78).
 
-Get the package:
-For Vue <=2.6 & vue-number-animation@2.x.x, you need to install @vue/composition-api.
+## Installation:
+
+To integrate the Animated Number Vue plugin into your project, follow the installation steps below.
 
 ```bash
 npm install vue-number-animation
 ```
 
-## ✔ Use
+For Vue versions <=2.6 and vue-number-animation@2.x.x, ensure you also install `@vue/composition-api`.
 
-Register Animate Number in your app:
+## Usage:
 
-```js
-//For @2.x.x
-import VueNumberAnimation from "vue-number-animation";
+Register the Animated Number component in your Vue application as demonstrated in the code snippet below:
 
-//For @1.x.x
+```javascript
+// For version 2.x.x - import the component as usual
+import NumberAnimation from "vue-number-animation";
+
+// For version 1.x.x
 import Vue from "vue";
 import VueNumber from "vue-number-animation";
 
 Vue.use(VueNumber);
 ```
 
-In your Vue file you can call it like this:
+In your Vue file, utilize the Animated Number component:
 
-```js
-// For @2.x.x
-<VueNumberAnimation
+```javascript
+// For version 2.x.x
+<NumberAnimation
     ref="number1"
 	:from="100"
 	:to="10000"
@@ -49,7 +53,7 @@ In your Vue file you can call it like this:
     easing="linear"
 />
 
-// For @1.x.x
+// For version 1.x.x
 <number
     tag="div"
     animationPaused
@@ -59,74 +63,40 @@ In your Vue file you can call it like this:
     easing="Back.easeIn"
     @complete="completed"
     @click="playAnimation"/>
-
-<script>
-export default {
-    // Sets the format of the number
-    methods: {
-        theFormat(number) {
-            return number.toFixed(2);
-        },
-        completed() {
-            console.log('Animation ends!');
-        },
-        playAnimation() {
-            this.$refs.number2.play()
-        }
-    }
-}
-</script>
 ```
 
-### API
+## API:
 
-Required Prop
+| **Property** | **Description**     | **Type** | **Default** |
+| ----------------- | ------------------- | -------- | ----------- |
+| to                | Animation end point | number   | 100           |
+| tag                                                                | Element wrapper                                       | string   | 'span'                                                          |
+| from                                                               | Animation start point                                 | number   | 0                                                               |
+| duration                                                           | Duration of the animation (seconds)                   | number   | 1                                                               |
+| delay                                                              | Amount of delay (seconds) before the animation starts | number   | 0                                                               |
+| easing                                                             | Ease of the animation                                 | string   | 'linear' (for version 2.x.x) / 'Power1.easeOut' (for version 1.x.x) |
+| autoplay (for version 2.x.x) / animationPaused (for version 1.x.x) | Pauses animation at starting point                    | boolean  | true (for version 2.x.x) / false (for version 1.x.x)                                                           |
 
-| Property | Description         | Type          | Default |
-| :------- | :------------------ | :------------ | :------ |
-| to       | Animation end point | <i>Number</i> | -       |
+#### Easing:
 
-Optional Props
+- For version 2.x.x: Choose from various eases to control the rate of change during the animation. Refer to [animejs documentation](https://animejs.com/documentation/#linearEasing).
 
-| Property                                 | Description                                           | Type           | Default                                   |
-| :--------------------------------------- | :---------------------------------------------------- | :------------- | :---------------------------------------- |
-| tag                                      | Element wrapper                                       | <i>String</i>  | 'span'                                    |
-| from                                     | Animation start point                                 | <i>Number</i>  | 0                                         |
-| duration                                 | Duration of the animation (seconds)                   | <i>Number</i>  | 1                                         |
-| delay                                    | Amount of delay (seconds) before the animation starts | <i>Number</i>  | 0                                         |
-| easing                                   | Ease of the animation                                 | <i>String</i>  | @1.x.x 'Power1.easeOut' - @2.x.x 'linear' |
-| @1.x.x animationPaused - @2.x.x autoplay | Pauses animation at starting point                    | <i>Boolean</i> | false                                     |
+- For version 1.x.x: Choose from various eases to control the rate of change during the animation. Refer to [GreenSock Easing documentation](https://greensock.com/docs/Easing). Don't forget the '.' between ease name, e.g., `Circ.easeInOut`.
 
-#### Easing prop with animejs @2.x.x
+#### Events:
 
-> Choose from various eases to control the rate of change during the animation.
-> These are all the values that the prop gets. https://animejs.com/documentation/#linearEasing
+| **Event** | **Description**                                                                        |
+| --------- | -------------------------------------------------------------------------------------- |
+| start    | Called when the animation has started                                                  |
+| complete | Called when the animation has completed                                                |
+| update   | Called every time the animation updates (on every frame while the animation is active) |
 
-##### Easing prop @1.x.x
+#### Methods:
 
-> Choose from various eases to control the rate of change during the animation.
-> These are all the values that the prop gets. https://greensock.com/docs/Easing
+| **Method** | **Description**                                        |
+| ---------- | ------------------------------------------------------ |
+| play     | Starts the animation                                   |
+| pause    | Pauses the animation                                   |
+| restart  | Restarts and begins playing forward from the beginning |
 
-```
-Don't forget the '.' between ease name eg. Circ.easeInOut
-```
-
-Events
-
-| Event     | Description                                                                            |
-| :-------- | :------------------------------------------------------------------------------------- |
-| @start    | Called when the animation has started                                                  |
-| @complete | Called when the animation has completed                                                |
-| @update   | Called every time the animation updates (on every frame while the animation is active) |
-
-Methods
-
-| Method    | Description                                            |
-| :-------- | :----------------------------------------------------- |
-| play()    | Starts the animation                                   |
-| pause()   | Pauses the animation                                   |
-| restart() | Restarts and begins playing forward from the beginning |
-
-## ✔ License
-
-MIT
+[![GitHub license](https://img.shields.io/github/license/nkoik/vue-animated-number.svg)](https://github.com/nkoik/vue-animated-number/blob/master/LICENSE)
