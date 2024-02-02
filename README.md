@@ -12,7 +12,9 @@ Simple & lightweight animated number plugin designed for Vue.js 3.0 & 2.x. This 
 
 ## Demo:
 
-Explore the demo for version 1.x.x [here](https://codesandbox.io/s/8256nwlq78).
+Explore the demos:
+- for version [1.x.x](https://codesandbox.io/s/8256nwlq78)
+- for version [2.x.x](https://codesandbox.io/p/sandbox/vue-3-vue-number-animation-44pxjr)
 
 ## Installation:
 
@@ -45,11 +47,11 @@ In your Vue file, utilize the Animated Number component:
 // For version 2.x.x
 <NumberAnimation
     ref="number1"
-	:from="100"
-	:to="10000"
-	:format="theFormat"
-	:duration="5"
-	autoplay
+    :from="100"
+    :to="10000"
+    :format="theFormat"
+    :duration="5"
+    autoplay
     easing="linear"
 />
 
@@ -58,8 +60,8 @@ In your Vue file, utilize the Animated Number component:
     tag="div"
     animationPaused
     ref="number2"
-	:to="10000"
-	:duration="5"
+    :to="10000"
+    :duration="5"
     easing="Back.easeIn"
     @complete="completed"
     @click="playAnimation"/>
