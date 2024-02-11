@@ -69,15 +69,15 @@ In your Vue file, utilize the Animated Number component:
 
 ## API:
 
-| **Property** | **Description**     | **Type** | **Default** |
-| ----------------- | ------------------- | -------- | ----------- |
-| to                | Animation end point | number   | 100           |
-| tag                                                                | Element wrapper                                       | string   | 'span'                                                          |
-| from                                                               | Animation start point                                 | number   | 0                                                               |
-| duration                                                           | Duration of the animation (seconds)                   | number   | 1                                                               |
-| delay                                                              | Amount of delay (seconds) before the animation starts | number   | 0                                                               |
-| easing                                                             | Ease of the animation                                 | string   | 'linear' (for version 2.x.x) / 'Power1.easeOut' (for version 1.x.x) |
-| autoplay (for version 2.x.x) / animationPaused (for version 1.x.x) | Pauses animation at starting point                    | boolean  | true (for version 2.x.x) / false (for version 1.x.x)                                                           |
+| **Property** | **Description**                                                              | **Type** | **Default** |
+| ----------------- |------------------------------------------------------------------------------| -------- | ----------- |
+| to                | Animation end point                                                          | number   | 100           |
+| tag                                                                | Element wrapper                                                              | string   | 'span'                                                          |
+| from                                                               | Animation start point                                                        | number   | 0                                                               |
+| duration                                                           | Duration of the animation (seconds)                                          | number   | 1                                                               |
+| delay                                                              | Delay (2.x.x in milliseconds / 1.x.x in seconds) before the animation starts | number   | 0                                                               |
+| easing                                                             | Ease of the animation                                                        | string   | 'linear' (for version 2.x.x) / 'Power1.easeOut' (for version 1.x.x) |
+| autoplay (for version 2.x.x) / animationPaused (for version 1.x.x) | Pauses animation at starting point                                           | boolean  | true (for version 2.x.x) / false (for version 1.x.x)                                                           |
 
 #### Easing:
 
